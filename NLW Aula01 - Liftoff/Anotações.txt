@@ -1,0 +1,5 @@
+[30 Dez, 2021] 
+- Introdução ao GitHub
+- Aula 01 NLW. Teórico, sem prática. 
+	https://app.rocketseat.com.br/node/mission-origin/group/nlw-together-origin/lesson/aula-01-liftoff-4
+	[Pausa: 1h21m36s]
