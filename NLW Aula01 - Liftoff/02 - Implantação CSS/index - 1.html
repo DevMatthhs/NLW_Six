@@ -1,0 +1,96 @@
+<!-- Este conteúdo não contém CSS, apenas tags HTML para estudo semântico e organizacional -->
+
+<!-- Planejamento de Estudo! (✔/✖)
+   Meta:    Desenvolver a estrutura semântica do HTML5 ✔
+   Motivo:  Compreender como é organizado semanticamente um HTML5 sem o uso do CSS. ✔
+   Como:    Assistir a aula focando exclusivamente no HTML5 ✔
+   Desafio: Desenvolver pós criação, variações do mesmo site para conteúdos diferentes. ✖
+   - Clothing store ✔
+   - Barbershop ✖
+   - Computer Courses ✖
+   - DevMatthhs ✖
+
+
+
+   # Execução de Exercício 01
+   # Autor: RocketSeat (https://app.rocketseat.com.br/)
+   # Estudante: DevMatthhs - Matheus Souza 
+   Step1: 31/12/2021 às 12h51m - Vídeo começa: 36:43 >> Fim: 1:26:19
+      Anotações: 
+        (1) Quanto maior a semântica é dedicada ao código, mais acessível a página se torna e melhor avaliado às ferramentas de pesquisa se torna. 
+        (2) O trabalho de indentação é essencial para uma futura revisão / trabalho em equipe.
+        (3) Para converter Px em REM, dívida o valor de Pixel pelo tamanho padrão da fonte. (Normal: 16)  
+
+   Step2: 01/01/2022 às 10h04m - Consultas Adicionais (https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/)
+      Anotações: 
+        (1) Elementos Estruturais Básicos: HTML, HEAD, BODY.
+        (2) Elementos Relacionados a uma Seção, mais semânticos: ARTICLE, ASIDE, FOOTER, HEADER, NAV.
+        (3) É importante que botões sejam realmente botões, e não outros elementos estilizados com uma aparência de botão.
+-->
+
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OriginSix</title>
+  </head>
+
+  <!-- HEADER:
+     Utilizar a tag 'Header', ou seja, cabeçalho, permite um suporte navegacional pela página mais eficiente. Geralmente nessa tag é comum conter elementos como a logo de um site, uma barra de navegação, etc. A tag header não separa conteúdo ou introduz uma nova seção. 
+    
+     -- NAV:
+    Utilizar a tag 'NAV' também permite um suporte navegacional pela página mais eficiente. Ela indica que seus itens são um grupo importante no quesito de navegação pelo site. Vários NAVs são permitidos dentro de uma página, por exemplo, para indicar uma navegação pelo site, propriamente dito ou pela página atual. 
+  -->
+
+  <body>
+    <header>
+      <nav>
+        <!-- Logomarca -->
+        <a href="">Beauty<span>Salon</span>.</a>
+        <div>...</div>
+      </nav>
+    </header>
+
+    <!-- MAIN:
+     Este define ao navegador que o conteúdo é o seu elemento principal. Seu conteúdo define o elemento principal do seu site, nesse caso, não deve conter elementos comuns como um cabeçalho, um rodapé, uma barra de navegação, informações de copyright... A não ser que esse seja seu conteúdo principal. 
+     
+     O MAIN não pode ser colocado dentro de TAGs como ARTICLE, ASIDE, FOOTER, HEADER ou NAV. O MAIN também deve ser único dentro da página. É sugerido que para que seja aceito em todas os navegadores, seja adicionado definido da seguinte forma: 
+     <main role="main"> ... </main>
+    
+  -- SECTION:
+    Este elemento é mais genérico. Ele deve ser usado para indicar uma nova seção da página, caso não aja nenhum outro elemento mais específico para definir tal conteúdo. Por exemplo, um elemento SECTION não é indicado para conter artigos, por exemplo, já que temos o elemento ARTICLE para isso. 
+
+    Embora o elemento SECTION seja mais genérico, ele não deve ser usado de forma genérica. Como assim? O elemento SECTION atribui um significado ao seu conteúdo, então não deve ser utilizado para um propósito de estilização. O elemento DIV existe para isso. 
+
+  -- DIV:
+    Um elemento de divisão para o fluxo de conteúdo que não representa nada. Utilizado mais especificamente para o auxilio de estilização da página, pela Class ou pelo ID.  
+  -->
+
+    <main>
+      <section>
+        <div>
+          <div>
+            <!-- Imagem agregada | Dica: Sempre que possível adicione um texto alternativo para representar a imagem. -->
+            <img src="Img/Img_1.jfif" alt="Mulher sorrindo para a cliente." />
+          </div>
+
+          <div>
+            <!-- Título Principal -->
+            <h1>Saúde natural para os seus cabelos</h1>
+
+            <!-- Descrição Complementar -->
+            <p>
+              Um salão exclusivo em São Paulo, especializado em tratamentos
+              naturais.
+            </p>
+          </div>
+        </div>
+
+        <!-- Botão de Agendamento de Horário -->
+        <a href="">Agendar um horário</a>
+      </section>
+    </main>
+  </body>
+</html>
