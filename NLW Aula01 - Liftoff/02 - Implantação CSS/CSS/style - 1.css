@@ -1,0 +1,83 @@
+/*  CSS = Folha de Estilo em Cascata
+
+Exemplo CSS:
+
+      Seletor{
+        Propriedade: Valor;       << Declaração = Aplicação ao conteúdo do Seletor
+      }
+
+
+Força dos Seletores: Quanto maior o nível, maior prioridade terá.
+   :    ROOT                Nível 5
+  < >   Style CSS           Nível 4
+   #    ID Seletor          Nível 3
+   .    Class               Nível 2
+  TAG   Elemento Seletor    Nível 1
+
+
+
+Explicação de Proporções
+  REM (Mais Recomendado)
+    A unidade fixa padrão é o PX (Pixel), utilizamos outras medidas proporcionais e relativas ao Pixel para definir um tamanho proporcional do elemento. Por exemplo, um texto normalmente é apresentado na tela com 16PX. A partir disso, podemos converter as medidas para chegar a um resultado responsivo.
+    
+    Por exemplo, digamos que eu deseje obter 72PX de altura ou de largura. Considerando que o tamanho da fonte padrão do navegador permaneça 16PX (Por padrão é esse o tamanho definido pelos navegadores), Calculamos 72PX/16PX para chegar na dimensão REM. Neste caso, 72/16 = 4.5rem
+
+  100% (Pouco Recomendado)
+    As dimensões em 100% se baseiam na dimensão padrão a qual se referem. Por exemplo, 100% para uma fonte, refere-se à 100% da configuração padrão do navegador: 16px, ou seja, 200% de uma Font-Size é 32px. 
+
+    No entanto isso não se aplica quando falamos em Largura e Altura da Página. Se for definido 100% de altura, será baseado na altura total da tela que é exibida. Caso o meta "viewport" não esteja declarado, então o tamanho será baseado no tamanho do monitor em que é exibido. O mesmo princípio se aplica à largura.
+
+Prioridade:
+      Mobile
+      Tablet
+      Desktop
+
+Layout: 
+      Header
+      Menu
+      Hero
+      Main
+      Banner
+      Extra
+      Image
+
+Step1: 01/01/2022 às 14h11m, Pausa Vídeo: 1h25m43s
+  Anotações: 
+    (1) Especificação: A Última declaração de seletores repetidos é a que será mantida. 
+*/
+
+* {
+  /* Seletor Universal*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Border-Box: Define as dimensões á partir da borda  */
+}
+
+:root {
+}
+
+body {
+  background: hsl(0, 0%, 100%); /* Define a cor de fundo da Seleção */
+}
+
+#header {
+  height: 4.5rem;
+}
+
+nav {
+  display: flex; /*Display: Flex - Deixa os elementos um do lado do outro.*/
+  justify-content: space-between; /* Justificação do Conteúdo - Deixará um elemento em cada lado da tela */
+}
+
+.Logo {
+}
+
+.container {
+  width: 90%;
+  margin: 0 1.5rem;
+}
+
+img {
+  width: 100%; /* Perceba que essa referência não é absoluta. As definições vão se somando. Foi definido que a classe "Container" teria 1.5rem nas laterias. Então dos 100% que é exibido, é considerado 100% menos as margens. */
+  height: 100%;
+}

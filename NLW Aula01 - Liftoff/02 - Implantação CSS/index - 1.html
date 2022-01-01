@@ -1,4 +1,4 @@
-<!-- Este conteúdo não contém CSS, apenas tags HTML para estudo semântico e organizacional -->
+<!-- Este conteúdo é focado na implantação do CSS -->
 
 <!-- Planejamento de Estudo! (✔/✖)
    Meta:    Desenvolver a estrutura semântica do HTML5 ✔
@@ -10,12 +10,10 @@
    - Computer Courses ✖
    - DevMatthhs ✖
 
-
-
    # Execução de Exercício 01
    # Autor: RocketSeat (https://app.rocketseat.com.br/)
    # Estudante: DevMatthhs - Matheus Souza 
-   Step1: 31/12/2021 às 12h51m - Vídeo começa: 36:43 >> Fim: 1:26:19
+   Step1: 31/12/2021 às 12h51m - Vídeo começa: 36:43 >> Fim: 2:27:19
       Anotações: 
         (1) Quanto maior a semântica é dedicada ao código, mais acessível a página se torna e melhor avaliado às ferramentas de pesquisa se torna. 
         (2) O trabalho de indentação é essencial para uma futura revisão / trabalho em equipe.
@@ -29,12 +27,25 @@
 -->
 
 <!DOCTYPE html>
+<!-- Essa informação não é considerada uma tag do HTML. É uma declaração utilizada para informar ao navegador qual a versão do HTML está sendo utilizada, neste caso HTML5 -->
 <html lang="pt_BR">
+  <!-- Esta tag declara ao navegador que o conteúdo padrão de exibição do conteúdo desta página está em Português, Brasil. É possível declarar nas tags posteriores trechos em outros idiomas e referencia-los. Isso é importante para ferramentas de tradução da página. -->
   <head>
     <meta charset="UTF-8" />
+    <!-- Este meta informa para o navegador que o mapa de caracteres utilizado é o UTF-8. Esses caracteres tem acentuação e melhor se encaixa com palavras portuguesas e inglesas. -->
+    <!-- Recomenda-se não utilizar CESU-8, UTF-7, COBU-1 e SCSU. Quaisquer codificações que não sejam compatíveis com ASCII, pois assim podem evitar alguns possíveis ataques ao script -->
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Este meta informa ao navegador a melhor versão mínima do internet explorer deve ser utilizada para renderizar a página. (IE=5, IE=EmulateIE7, IE=7,      IE=EmulateIE8, IE=8, E=EmulateIE9, IE=9, IE=Emulate10, IE=10, IE=EmulateIE11, IE=11, IE=Edge) -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Este meta informa ao navegador que a área de exibição width deve seguir o mesmo tamanho width da janela apresentada, na escala de 1.0 -->
+
+    <link rel="stylesheet" href="CSS/style - 1.css" />
+    <!-- Este meta cria um vínculo de referência com uma folha de estilo externa para complementar o código. Não é obrigatória, uma vez que a estilização do documento pode ser feita na própria tag HTML ou em um meta style. No entanto é este o formato mais recomendado e aceito atualmente. -->
+
     <title>OriginSix</title>
+    <!-- Este é o título representativo da página. É utilizada para representar a página em Histórico de Pesquisas, Favoritos, Redirecionamentos de Sites, etc. Geralmente um FavIcon acompanha essa tag. -->
   </head>
 
   <!-- HEADER:
@@ -45,19 +56,19 @@
   -->
 
   <body>
-    <header>
-      <nav>
+    <header id="header">
+      <nav class="container">
         <!-- Logomarca -->
-        <a href="">Beauty<span>Salon</span>.</a>
-        <div>...</div>
+        <a href="" class="logo">Beauty<span>Salon</span>.</a>
+        <div class="menu">...</div>
       </nav>
     </header>
 
-    <!-- MAIN:
-     Este define ao navegador que o conteúdo é o seu elemento principal. Seu conteúdo define o elemento principal do seu site, nesse caso, não deve conter elementos comuns como um cabeçalho, um rodapé, uma barra de navegação, informações de copyright... A não ser que esse seja seu conteúdo principal. 
-     
-     O MAIN não pode ser colocado dentro de TAGs como ARTICLE, ASIDE, FOOTER, HEADER ou NAV. O MAIN também deve ser único dentro da página. É sugerido que para que seja aceito em todas os navegadores, seja adicionado definido da seguinte forma: 
-     <main role="main"> ... </main>
+  <!-- MAIN:
+    Este define ao navegador que o conteúdo é o seu elemento principal. Seu conteúdo define o elemento principal do seu site, nesse caso, não deve conter elementos comuns como um cabeçalho, um rodapé, uma barra de navegação, informações de copyright... A não ser que esse seja seu conteúdo principal. 
+    
+    O MAIN não pode ser colocado dentro de TAGs como ARTICLE, ASIDE, FOOTER, HEADER ou NAV. O MAIN também deve ser único dentro da página. É sugerido que para que seja aceito em todas os navegadores, seja adicionado definido da seguinte forma: 
+    <main role="main"> ... </main>
     
   -- SECTION:
     Este elemento é mais genérico. Ele deve ser usado para indicar uma nova seção da página, caso não aja nenhum outro elemento mais específico para definir tal conteúdo. Por exemplo, um elemento SECTION não é indicado para conter artigos, por exemplo, já que temos o elemento ARTICLE para isso. 
@@ -70,7 +81,7 @@
 
     <main>
       <section>
-        <div>
+        <div class="container">
           <div>
             <!-- Imagem agregada | Dica: Sempre que possível adicione um texto alternativo para representar a imagem. -->
             <img src="Img/Img_1.jfif" alt="Mulher sorrindo para a cliente." />
@@ -92,5 +103,7 @@
         <a href="">Agendar um horário</a>
       </section>
     </main>
+    <footer>
+    </footer>
   </body>
 </html>
