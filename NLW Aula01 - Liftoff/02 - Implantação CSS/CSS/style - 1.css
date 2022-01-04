@@ -40,6 +40,7 @@ Layout:
       Banner
       Extra
       Image
+      Footer
 
 Step1: 01/01/2022 às 14h11m, Pausa Vídeo: 1h25m43s
   Anotações: 
@@ -48,36 +49,120 @@ Step1: 01/01/2022 às 14h11m, Pausa Vídeo: 1h25m43s
 
 * {
   /* Seletor Universal*/
-  margin: 0;
-  padding: 0;
+  margin: 0; /* Margem*/
+  padding: 0; /* Preenchimento*/
   box-sizing: border-box; /* Border-Box: Define as dimensões á partir da borda  */
+  text-decoration: none;
 }
 
 :root {
+  /* Essas informações aqui são variáveis, para que possam armazenar valores para serem requisitadas mais tarde em um ou mais elementos. Para solicitar basta chamar Element { var(--variavel); } */
+  --hue: 159;
+
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0 98%);
+  --body-color: hsl(0 0 98%);
+
+  /*Incremento Pessoal: Teste */
+  --logo-peso: 700;
+  --logo-font-family: 'Poppins';
+  --logo-font-size: 1.785rem;
+  --logo-SS: sans-serif;
+  --logo-font: var(--logo-peso) var(--logo-font-size) var(--logo-font-family), var(--logo-SS);
+  --logo-color1: var(--title-color);
+  --logo-color2: var(--base-color);
 }
 
 body {
-  background: hsl(0, 0%, 100%); /* Define a cor de fundo da Seleção */
+  /* Define a cor de fundo da Seleção */
+  background: var(--body-color);
+  font: 400 1rem 'DM Sans', sans-serif;
+
+  /* "Vendor Prefix" ~ Não entendi o que seria isso! */
+  -webkit-font-smoothing: antialiased;
 }
 
 #header {
-  height: 4.5rem;
 }
+
+/* Esse é um modo que permite deixar os elementos um ao lado do outro: */
 
 nav {
-  display: flex; /*Display: Flex - Deixa os elementos um do lado do outro.*/
-  justify-content: space-between; /* Justificação do Conteúdo - Deixará um elemento em cada lado da tela */
+  /*Altura*/
+  height: 4.5rem;
+
+  /*Display: Flex - Deixa os elementos um ao lado do outro.*/
+  display: flex;
+
+  /* Justificação do Conteúdo - Deixará um elemento em cada lado da tela */
+  justify-content: space-between;
+
+  /*Alinhar os itens na vertical*/
+  align-items: center;
 }
 
-.Logo {
+nav div.menu {
+  margin: 0 5% 0 0;
 }
 
-.container {
-  width: 90%;
-  margin: 0 1.5rem;
+a.logo {
+  font: var(--logo-font);
+  color: var(--logo-color1);
+}
+
+a.logo span {
+  font: var(--logo-font);
+  color: var(--logo-color2);
+}
+
+.container .imagem {
+  margin: 0 2rem 1.5rem 0;
+  box-shadow: 50px -30px var(--base-color-second);
+  border-radius: 0.3rem;
+}
+
+.container .text {
+  /*Largura*/
+  margin: 0 0 0 1.5rem;
+  text-align: center;
 }
 
 img {
   width: 100%; /* Perceba que essa referência não é absoluta. As definições vão se somando. Foi definido que a classe "Container" teria 1.5rem nas laterias. Então dos 100% que é exibido, é considerado 100% menos as margens. */
   height: 100%;
+}
+
+h1 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+}
+
+.button {
+  margin-top: 1.5rem;
+}
+
+button {
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: var(--base-color);
+  transition: color 0.5s;
+  transition: background 0.5s;
+  color: white;
+}
+
+button:hover {
+  background: var(--base-color-second);
+  color: black;
+}
+
+section {
+  margin: 2rem 0;
 }

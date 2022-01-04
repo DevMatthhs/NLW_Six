@@ -1,0 +1,84 @@
+/* ------------------ Reset ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* ---------------- Variáveis ---------------- */
+:root {
+  /* Cores */
+  --Cor1-da-Logo: #35235d;
+  --Cor2-da-Logo: #4c49a2;
+
+  --Cor-Especial-1: #4c49a2e9;
+  --Cor-de-Destaque: #35235D;
+  --Cor-de-Texto-Destaque: #fff;
+
+  /* Fontes */
+  --Fonte-da-Logo: 'Verdana', sans-serif;
+  --Tamanho-da-Logo: 1.5rem;
+
+  --Margem-Padrão: 1.5rem;
+}
+
+/* --------------- Parâmetros ---------------- */
+
+/* Dimensões: Header, Nav */
+header {
+  padding: 2rem var(--Margem-Padrão);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilização: Header, Nav */
+header nav a {
+  color: var(--Cor1-da-Logo);
+  font-size: var(--Tamanho-da-Logo);
+  font-weight: bolder;
+}
+
+header nav a span {
+  color: var(--Cor2-da-Logo);
+}
+
+/* Dimensões: Imagem 1*/
+.imagem{
+  margin: 2.5rem var(--Margem-Padrão) 0 0;
+  box-shadow: 50px -30px var(--Cor-Especial-1);
+}
+
+.imagem-1{
+  height: 100%;
+  width: 100%;
+}
+
+/* Estilização: Conteúdo */
+.texto{
+  text-align: center;
+}
+
+.texto h1{
+  margin-top: var(--Margem-Padrão);
+}
+
+.texto p{
+  margin-top: var(--Margem-Padrão);
+}
+
+/* Estilização do Botão */
+button{
+  padding: calc(var(--Margem-Padrão) - 1rem);
+  background: var(--Cor1-da-Logo);
+  margin: var(--Margem-Padrão);
+  border-radius: .3rem;
+}
+
+button a{
+  color: var(--Cor-de-Texto-Destaque);
+}

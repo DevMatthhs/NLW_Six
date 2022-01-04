@@ -44,6 +44,14 @@
     <link rel="stylesheet" href="CSS/style - 1.css" />
     <!-- Este meta cria um vínculo de referência com uma folha de estilo externa para complementar o código. Não é obrigatória, uma vez que a estilização do documento pode ser feita na própria tag HTML ou em um meta style. No entanto é este o formato mais recomendado e aceito atualmente. -->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https: //fonts.googleapis.com/css2? família = DM + Sans: wght @ 400; 500; 700 &família = Poppins: wght @ 400; 500; 700 & display = swap "
+      rel=" stylesheet "
+    />
+    <!-- Este link solicita uma pré-conexão ao Google Fonts para solicitar as Fonts escolhidas e disponibilizadas para uso no projeto. -->
+
     <title>OriginSix</title>
     <!-- Este é o título representativo da página. É utilizada para representar a página em Histórico de Pesquisas, Favoritos, Redirecionamentos de Sites, etc. Geralmente um FavIcon acompanha essa tag. -->
   </head>
@@ -59,12 +67,12 @@
     <header id="header">
       <nav class="container">
         <!-- Logomarca -->
-        <a href="" class="logo">Beauty<span>Salon</span>.</a>
+        <a href="#" class="logo">Beauty<span>Salon</span>.</a>
         <div class="menu">...</div>
       </nav>
     </header>
 
-  <!-- MAIN:
+    <!-- MAIN:
     Este define ao navegador que o conteúdo é o seu elemento principal. Seu conteúdo define o elemento principal do seu site, nesse caso, não deve conter elementos comuns como um cabeçalho, um rodapé, uma barra de navegação, informações de copyright... A não ser que esse seja seu conteúdo principal. 
     
     O MAIN não pode ser colocado dentro de TAGs como ARTICLE, ASIDE, FOOTER, HEADER ou NAV. O MAIN também deve ser único dentro da página. É sugerido que para que seja aceito em todas os navegadores, seja adicionado definido da seguinte forma: 
@@ -82,12 +90,17 @@
     <main>
       <section>
         <div class="container">
-          <div>
+          <div class="backgreen"></div>
+          <div class="imagem">
             <!-- Imagem agregada | Dica: Sempre que possível adicione um texto alternativo para representar a imagem. -->
-            <img src="Img/Img_1.jfif" alt="Mulher sorrindo para a cliente." />
+            <img
+              src="Img/Img_1.jfif"
+              alt="Mulher sorrindo para a cliente."
+              class="imagem"
+            />
           </div>
 
-          <div>
+          <div class="text">
             <!-- Título Principal -->
             <h1>Saúde natural para os seus cabelos</h1>
 
@@ -97,13 +110,13 @@
               naturais.
             </p>
           </div>
+          <div class="button">
+            <button class="text">Agendar um horário</button>
+          </div>
+          <!-- Botão de Agendamento de Horário -->
         </div>
-
-        <!-- Botão de Agendamento de Horário -->
-        <a href="">Agendar um horário</a>
       </section>
     </main>
-    <footer>
-    </footer>
+    <footer></footer>
   </body>
 </html>
